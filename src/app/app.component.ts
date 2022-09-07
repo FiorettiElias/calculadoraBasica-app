@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NonNullableFormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'calculadora-app';
+  titulo = 'Aplicación de Calculadora';
+  primerNumero!: number;
+  segundoNumero!: number;
+  resultado!: number;
+
+  onSumar():void{
+  this.resultado = this.primerNumero + this.segundoNumero;
+  
+  }
+
 }
